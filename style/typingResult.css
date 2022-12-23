@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+
+
+
+.result{
+    /* border: 1px solid white; */
+    display: flex;
+    justify-content: space-between;
+    width: 850px;
+    margin: 0 auto;
+}
+
+
+
+canvas#myChart.chartjs-render-monitor{
+    height: 350px;
+}
+
+
+
+.wpm-score-sec{
+    margin-top: 10px;
+}
+
+.timing-sec{
+    /* border: 1px solid white; */
+    margin-top: -26px;
+}
+
+
+
+
+.wpm-score-sec h2{
+    font-family: 'Roboto Mono', monospace;
+    color: rgb(134, 134, 134);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.wpm-score-sec  h3{
+    font-family: 'Roboto Mono', monospace;
+    color: #e1b000;
+    font-weight: bold;
+    font-size: 45px;
+    margin-top: -14px;
+}
+
+
+/* ---- */
+
+
+.timing-sec h2{
+    font-family: 'Roboto Mono', monospace;
+    color: rgb(134, 134, 134);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+.timing-sec  h3{
+    font-family: 'Roboto Mono', monospace;
+    color: #e1b000;
+    font-weight: bold;
+    font-size: 45px;
+    margin-top: -12px;
+}

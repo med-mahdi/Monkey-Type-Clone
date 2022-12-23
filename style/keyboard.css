@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+
+
+
+ul.keyboard{
+    /* border: 1px solid red; */
+    width: 400px;
+    width: max-content;
+    margin: 0 auto;
+    font-family: 'Roboto Mono', monospace;;
+}
+
+
+ul.keyboard li{
+    /* border: 1px solid  red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6px;
+}
+
+
+ul.keyboard li dt{
+    border: 1px solid rgb(134, 134, 134); 
+    color: rgb(134, 134, 134);
+    padding: 1em;
+    /* border-radius: 50%; */
+    border-radius: 7px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+}
+
+
+dt#space-button{
+    border: 1px solid #8c8c8c;
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+dt#space-button h3{
+    font-size: 10px;
+    opacity: 0;
+}
+
+
+/* dt.activeKey{
+    background-color: #727272;
+    color: white !important;
+} */

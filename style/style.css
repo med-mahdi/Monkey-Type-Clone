@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+
+*{
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    padding: 0 10px;
+    align-items: center;
+    justify-content: center;
+    /* background: #323437; */
+    /* background: #ffffff; */
+    background: #22262a;
+    /* overflow-y: hidden; */
+}
+
+
+#capLockNotify{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e1b000;
+    border-radius: 3px;
+    color: #212121;
+    padding: 10px;
+    pointer-events: none;
+    z-index: 999;
+    width: max-content;
+    margin: 0 auto;
+    margin-bottom: 17px;
+}
+
+.material-symbols-outlined{
+    margin-right: 5px;
+    color: #212121;
+}
+
+
+#capLockNotify.dontShow{
+    opacity: 0;
+}
+
+#capLockNotify.showit{
+    opacity: 1;
+}
+
+.typing-test-section{
+    position: relative;
+    top: -10px;
+}
+
+
+#score{
+    font-size: 20px;
+    font-family: 'Roboto Mono', monospace;
+    color: #e1b000;
+    font-weight: 300;
+    margin-top: -5px;
+    /* border: 1px solid; */
+}
+
+
+#app{
+    margin: 0 auto;
+    width: 65%;
+    max-width: 1000px;
+    position: relative;
+    top : -8px;
+    /* border: 1px solid red; */
+    height: 100vh;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+}
+
+
+
+p{
+    line-height: 165%;
+    font-size: 22px;
+    word-spacing: -2px;
+    text-align: justify;
+    color: #7b7b7b;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: medium;
+    margin-top: -5px;
+}
+
+
+input{
+    opacity: 0;
+    z-index: -999;
+    position: absolute;   
+}
+
+word span.correct{
+    color: rgb(228, 228, 228);
+}
+
+word span.error{
+    color:#ff3a4d;
+    /* border-bottom: 1px solid #ff3a4d; */
+}
+
+span.lineLtr {
+    /* border-left: 2px solid rgb(51, 51, 51); */
+    border-left: 2px solid #b6b6b6;
+}
+
+
+span.lastLetter{
+    /* border-right: 2px solid rgb(51, 51, 51); */
+    border-right: 2px solid #b6b6b6;
+}
+
+span.material-symbols-outlined{
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 19px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+}
