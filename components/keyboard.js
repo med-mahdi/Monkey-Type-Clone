@@ -67,6 +67,7 @@ app.component('typing-keyboard', {
                         key.style.backgroundColor = "transparent";
                         key.style.border = "1px solid rgb(134, 134, 134)";
                         key.style.color = "rgb(134, 134, 134)";
+                        key.style.boxShadow = "none";
                     })
 
 
@@ -74,6 +75,7 @@ app.component('typing-keyboard', {
                     spaceButton.style.transition = "ease .3s"
                     spaceButton.style.backgroundColor = "#e1b000";
                     spaceButton.style.border = "1px solid #e1b000";
+                    spaceButton.style.boxShadow = "0px 6px 33px #e2b51450";
                 }
 
 
@@ -82,12 +84,14 @@ app.component('typing-keyboard', {
                     key.style.backgroundColor = "#e1b000";
                     key.style.border = "1px solid #e1b000";
                     key.style.color = "black";
+                    key.style.boxShadow = "0px 6px 33px #e2b51450";
                 }
                 else if (clicked_key != key.innerHTML){
                     key.style.transition = "ease .3s"
                     key.style.backgroundColor = "transparent";
                     key.style.border = "1px solid rgb(134, 134, 134)";
                     key.style.color = "rgb(134, 134, 134)";
+                    key.style.boxShadow = "none";
                 }
             })
         })
