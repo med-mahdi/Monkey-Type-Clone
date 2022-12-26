@@ -26,8 +26,8 @@ ul.keyboard li dt{
     padding: 1em;
     /* border-radius: 50%; */
     border-radius: 7px;
-    width: 20px;
-    height: 20px;
+    width: 45px;
+    height: 45px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,7 +44,7 @@ dt#space-button{
 }
 
 dt#space-button h3{
-    font-size: 10px;
+    font-size: 13px;
     opacity: 0;
 }
 
@@ -53,3 +53,32 @@ dt#space-button h3{
     background-color: #727272;
     color: white !important;
 } */
+
+
+
+
+/* ------------------ Media Query ------------------- */
+
+
+
+@media (max-width:1200px) {
+    ul.keyboard{
+        /* border: 1px solid red; */
+        width: 400px;
+        width: max-content;
+        margin: 0 auto;
+        font-family: 'Roboto Mono', monospace;;
+        margin-top: 30px;
+    }
+    ul.keyboard li dt{
+        border-radius: 7px;
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 790px) {
+    ul.keyboard{
+        display: none;
+    }
+}
