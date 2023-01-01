@@ -73,13 +73,30 @@ app.component('typing-test-component', {
         //> This Function -> Processing The Text Giving And Display It on the paragraph
         displayText() {
             var text_place = document.getElementById("paragraph-area");
+            var textArray = this.text_list;
+            let i = 0;
             this.text_list.forEach(function (word) {
-                var res_word = ""
-                var letters = word.split("")
-                letters.forEach(function (ltr) {
-                    res_word += `<span>${ltr}</span>`
-                })
-                text_place.innerHTML += `<word>${res_word}</word> `
+                //> Add a class to the last word in the text.
+                let lastWord = (textArray[textArray.length-1])
+                let lastWordIndex = textArray.length-1
+                if (word === lastWord && lastWordIndex === i) {
+                    var res_word = ""
+                    var letters = word.split("")
+                    letters.forEach(function (ltr) {
+                        res_word += `<span>${ltr}</span>`
+                    })
+                    text_place.innerHTML += `<word id="lastWord">${res_word}</word> `
+                    i++;
+                }
+                else {
+                    var res_word = ""
+                    var letters = word.split("")
+                    letters.forEach(function (ltr) {
+                        res_word += `<span>${ltr}</span>`
+                    })
+                    text_place.innerHTML += `<word>${res_word}</word> `
+                    i++
+                }
             })
         }
         ,
@@ -278,7 +295,7 @@ app.component('typing-test-component', {
         var randomValue = that.randomNumberFunction()
         this.paragraph = (paragraphs[randomValue])
         this.paragraph = this.paragraph.toLowerCase().trim();
-        this.text_list = this.paragraph.split(" ").slice(0,30);
+        this.text_list = this.paragraph.split(" ").slice(0,3);
         that.displayText()
         that.activeInput()
         var allWords = document.querySelectorAll(`word`)[0]
