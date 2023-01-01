@@ -83,7 +83,7 @@ app.component('typing-test-component', {
                     var res_word = ""
                     var letters = word.split("")
                     letters.forEach(function (ltr) {
-                        res_word += `<span>${ltr}</span>`
+                        res_word += `<span>${ltr}</span>`;
                     })
                     text_place.innerHTML += `<word id="lastWord">${res_word}</word> `
                     i++;
@@ -143,7 +143,7 @@ app.component('typing-test-component', {
         //> This Function -> Check Input While User Typing and Entring Input
         processInput(event) {
             if (this.end_game == true) {
-                alert("you finished the typing test")
+                console.log("you finished the typing test")
             }
             else {
                 var that = this
@@ -295,13 +295,28 @@ app.component('typing-test-component', {
         var randomValue = that.randomNumberFunction()
         this.paragraph = (paragraphs[randomValue])
         this.paragraph = this.paragraph.toLowerCase().trim();
-        this.text_list = this.paragraph.split(" ").slice(0,3);
+        this.text_list = this.paragraph.split(" ").slice(0,32);
         that.displayText()
         that.activeInput()
         var allWords = document.querySelectorAll(`word`)[0]
         allWords.className = "active"
         var activeLetter = document.querySelector(`word > span:nth-child(1)`)
         activeLetter.id = "activeLetter"
+
+
+        //> This Check if the user typed the last letter in the text => to end the game.
+        var lastWordLength = that.text_list[that.text_list.length - 1].length;
+        setInterval(function() {
+            var lastWord = document.getElementById("lastWord");
+            var activeWord = document.querySelector(".active");
+            if (lastWord === activeWord){
+                if (lastWordLength === that.input_value.length){
+                    console.log("Here finish The Game");
+                    that.end_game = true;
+                }
+            }
+
+        },200)
     }
     ,
     watch : {
