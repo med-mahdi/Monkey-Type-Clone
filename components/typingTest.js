@@ -159,12 +159,11 @@ app.component('typing-test-component', {
                             letter.className = "correct"
                             this.correct_key_num++
                             this.inputedCorrectLetters++
-                            this.inputedLetters++
                     }
                     else if (this.input_value[j] != word[j]) {
                             letter.className = "error"
-                            this.inputedLetters++
                     }
+                    this.inputedLetters++
                 }
                 if (this.input_value.length == word_length){
                     var the_last_letter = document.querySelector("word.active > span:last-child")
@@ -362,6 +361,11 @@ app.component('typing-test-component', {
         end_game : {
             handler(){
                 if (this.end_game == true){
+                    // Showing all Values for the test
+                    console.log("Inputed letter :" + this.inputedLetters)
+                    console.log("Inputed Correct Letters :" + this.inputedCorrectLetters)
+                    console.log("Inputed Correct Words :" + this.correctWords)
+        
                     this.$emit("show-result",this.correctWords,this.testRecordChart)
                 }
             }
