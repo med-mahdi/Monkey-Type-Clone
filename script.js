@@ -50,8 +50,8 @@ const app = Vue.createApp({
             var final_result = [xValues,yValues]
             this.typing_chart_score = final_result
             this.typing_test_score = value;
-            this.typing_test_component = !this.typing_test_component;
-            this.result_test_component = !this.result_test_component;
+            // this.typing_test_component = !this.typing_test_component;
+            // this.result_test_component = !this.result_test_component;
         }
     }
     ,

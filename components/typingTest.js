@@ -19,6 +19,7 @@ app.component('typing-test-component', {
             time_count : 30,
             // 
             testRecordChart : [],
+            testWordRecordList : [],
             activeLock : false,
             // 
             correctWords: 0,
@@ -201,6 +202,10 @@ app.component('typing-test-component', {
                     try{
                         var activeLetter = document.querySelector(`word:nth-child(${this.index+2}) > span:first-child`)
                         activeLetter.id = "activeLetter"
+                        // add word here to the word list record
+                        this.testWordRecordList.push(this.input_value);
+                        console.log(this.testWordRecordList);
+                        // clearing input values
                         this.input_value = ""
                         this.index++
                         this.correct_key_num = 0
@@ -222,6 +227,25 @@ app.component('typing-test-component', {
                         var lineLetter = document.querySelector(`word.active > span:nth-child(1)`)
                         lineLetter.className = ""
                         lineLetter.classList.add("lineLtr")
+
+                        // this.index--
+                        if ((this.testWordRecordList[this.index-1]) == this.text_list[this.index-1]){
+                            console.log("you can't go back because the word is correct")
+                        }
+                        else {
+                            this.input_value = (this.testWordRecordList[this.index-1])
+                            console.log("input value changed" , this.input_value)
+                            console.log("drive to " + this.text_list[this.index-1])
+                
+                            var allWords = document.querySelectorAll(`word`)
+                            var wordAcess = (allWords[this.index-1].childNodes)
+                            wordAcess.forEach(function(spanLetter){
+                                console.log(spanLetter)
+                                for (i = 0; i < this.input_value.length; i){
+                                    console.log(wordAcess[i])
+                                }
+                            })
+                        }
                     }
                     else{
                         if (this.maxLengthInpt == 1){
